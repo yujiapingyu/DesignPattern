@@ -9,7 +9,7 @@ class ConcreteDecoratorA : public Decorator{
 public:
   void operation() override {
     component->operation();
-    std::cout << "I am decorator A." << std::endl;
+    std::cout << "装饰器A执行操作." << std::endl;
   }
 };
 
