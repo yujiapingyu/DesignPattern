@@ -12,13 +12,13 @@ int main() {
     3. 用装饰器B来包装组件A;
     4. 调用装饰器B的operation方法
   */
-  ConcreteComponent component;
-  ConcreteDecoratorA da;
-  ConcreteDecoratorB db;
+  auto component = std::make_shared<ConcreteComponent>();
+  auto da = std::make_shared<ConcreteDecoratorA>();
+  auto db = std::make_shared<ConcreteDecoratorB>();
 
-  da.set_component(&component);
-  db.set_component(&da);
-  db.operation();
+  da->set_component(component);
+  db->set_component(da);
+  db->operation();
 
   return 0;
 }
