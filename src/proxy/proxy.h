@@ -16,6 +16,7 @@ private:
   std::shared_ptr<RealSubject> real_subject;
 public:
   void request () override {
+    std::cout<<"我是代理，我代RealSubject来执行request."<<std::endl;
     if (real_subject == nullptr) {
         real_subject = std::make_shared<RealSubject>();
     }

@@ -12,7 +12,7 @@ namespace proxy {
 class RealSubject : public Subject {
 public:
   void request () override {
-    std::cout<<"RealSubject request."<<std::endl;
+    std::cout<<"RealSubject执行请求成功."<<std::endl;
   }
 };
     
