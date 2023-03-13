@@ -1,7 +1,7 @@
 #pragma once
 
 /*
-  RealSubject类，定义了Proxy所代表的真实实体.
+  Proxy类，代RealSubject执行request.
 */
 
 #include <iostream>
