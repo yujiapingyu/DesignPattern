@@ -4,6 +4,8 @@
 #include <memory>
 #include "component.h"
 
+namespace decorator {
+
 class Decorator : public Component{
 protected:
   std::shared_ptr<Component> component;
@@ -17,3 +19,5 @@ public:
     component->operation();
   }
 };
+
+} // end of decorator
