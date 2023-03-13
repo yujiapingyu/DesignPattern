@@ -13,9 +13,9 @@ int main() {
     3. 用装饰器B来包装组件A;
     4. 调用装饰器B的operation方法
   */
-  auto component = std::make_shared<ConcreteComponent>();
-  auto da = std::make_shared<ConcreteDecoratorA>();
-  auto db = std::make_shared<ConcreteDecoratorB>();
+  auto component = std::make_shared<decorator::ConcreteComponent>();
+  auto da = std::make_shared<decorator::ConcreteDecoratorA>();
+  auto db = std::make_shared<decorator::ConcreteDecoratorB>();
 
   da->set_component(component);
   db->set_component(da);
