@@ -1,0 +1,46 @@
+@startuml decorator_pattern
+abstract class Component {
+ +{abstract} operation()
+}
+
+class ConcreteComponent extends Component{
+ +operation()
+}
+
+abstract class Decorator extends Component{
+ -Component component
+ +{abstract} operation()
+}
+
+class ConcreteDecoratorA extends Decorator{
+ +operation()
+}
+
+class ConcreteDecoratorB extends Decorator {
+ +operation()
+}
+
+Decorator --> Component
+
+note top of Component
+  Component是定义一个对象接口，
+  可以给这些对象动态地添加装饰
+end note
+
+note top of ConcreteComponent
+  定义了一个具体的对象
+  也可以给这些对象添加一些装饰
+end note
+
+note top of Decorator
+  装饰抽象类，继承了Component
+  从外类来扩展Component的功能
+  Component无需感知Decorator
+end note
+
+note "ConcreteDecorator就是具体的装饰对象，起到给Component添加职责的功能" as Note1
+ConcreteDecoratorA .. Note1
+ConcreteDecoratorB .. Note1
+
+
+@endumld
